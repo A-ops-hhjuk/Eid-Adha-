@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Eid Al-Adha | Abdullah Al-Khalayleh - بطاقة معايدة احترافية</title>
+<meta name="description" content="بطاقة معايدة فاخرة بمناسبة عيد الأضحى المبارك" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    min-height: 100vh;
+    font-family: 'Inter', 'Noto Naskh Arabic', sans-serif;
+    background: #0a0c12;
+    overflow-x: hidden;
+}
+
+/* Background Image with Parallax Effect */
+.bg-scene {
+    position: fixed;
+    top: -5%;
+    left: -5%;
+    width: 110%;
+    height: 110%;
+    z-index: 0;
+    animation: slowZoom 20s ease-in-out infinite alternate;
+}
+
+@keyframes slowZoom {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.08); }
+}
+
+.bg-scene img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.55) contrast(1.1) saturate(0.95);
+}
+
+.overlay-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.7) 100%);
+}
+
+/* Dynamic Glow Effect */
+.warm-glow {
+    position: fixed;
+    bottom: -20%;
+    left: -20%;
+    width: 140%;
+    height: 70%;
+    background: radial-gradient(ellipse at 50% 80%, rgba(218, 165, 85, 0.25), rgba(0,0,0,0) 70%);
+    pointer-events: none;
+    z-index: 1;
+    animation: pulseGlow 4s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+    0%, 100% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 0.8; transform: scale(1.05); }
+}
+
+.main-container {
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Premium Card with Hover Effect */
+.eid-card {
+    max-width: 900px;
+    width: 100%;
+    background: rgba(18, 22, 30, 0.75);
+    backdrop-filter: blur(28px);
+    border-radius: 64px;
+    border: 1px solid rgba(255, 215, 140, 0.35);
+    box-shadow: 0 50px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(218, 165, 85, 0.2) inset;
+    transition: all 0.5s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    overflow: hidden;
+}
+
+.eid-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 60px 90px rgba(0,0,0,0.6), 0 0 0 1.5px rgba(218, 165, 85, 0.3) inset;
+}
+
+.card-inner {
+    padding: 60px 56px;
+}
+
+/* Meta Badge */
+.meta-badge {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 27px;
+    flex-wrap: wrap;
+    gap: 12px;
+    border-bottom: 2px solid rgba(255, 220, 150, 0.25);
+    padding-bottom: 28px;
+}
+
+.badge-date {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 500;
+    color: #e6c280;
+    background: rgba(217, 184, 108, 0.15);
+    padding: 8px 20px;
+    border-radius: 50px;
+    backdrop-filter: blur(4px);
+}
+
+/* Main Typography */
+.greeting-arabic {
+    font-family: 'Noto Naskh Arabic', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #fef5e3;
+    margin-bottom: 25px;
+    text-shadow: 0 4px 25px rgba(0,0,0,0.4);
+}
+
+.greeting-arabic span {
+    background: linear-gradient(135deg, #ffffff, #e0a627, #f7eccd);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shimmer 3s linear infinite;
+}
+
+.name-headline span{
+    background: linear-gradient(135deg, #ffffff, #e0a627, #f7eccd);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shimmer 3s linear infinite;
+}
+@keyframes shimmer {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+}
+
+.name-headline {
+    font-size: clamp(1.3rem, 4vw, 2rem);
+    font-weight: 600;
+    color: #fff5e6;
+    margin-bottom: 25px;
+    letter-spacing: -0.3px;
+}
+
+.message {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: rgba(255, 245, 230, 0.9);
+    font-weight: 400;
+    margin: 28px 0 35px;
+    border-right: 4px solid #e6c280;
+    padding-right: 28px;
+}
+
+/* Dua Sections */
+.dua-container {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 36px;
+    padding: 12px;
+    margin: 25px 0;
+    border: 1px solid rgba(218, 165, 85, 0.25);
+    transition: all 0.3s ease;
+}
+
+.dua-container:hover {
+    background: rgba(0, 0, 0, 0.4);
+    border-color: rgba(218, 165, 85, 0.4);
+    transform: translateX(-5px);
+}
+
+.dua-text {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: #faf0df;
+    font-weight: 450;
+}
+
+/* Audio Control */
+.audio-control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(0,0,0,0.5);
+    padding: 14px 24px;
+    border-radius: 60px;
+    margin-top: 25px;
+    border: 1px solid rgba(218, 165, 85, 0.4);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.audio-control:hover {
+    background: rgba(0,0,0,0.65);
+    border-color: rgba(218, 165, 85, 0.7);
+    transform: scale(1.02);
+}
+
+.audio-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #e6c280;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.play-icon {
+    font-size: 1.3rem;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.6; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.1); }
+}
+
+.waveform {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.waveform span {
+    width: 3px;
+    height: 20px;
+    background: #e6c280;
+    border-radius: 3px;
+    animation: wave 0.8s ease-in-out infinite;
+}
+
+.waveform span:nth-child(1) { animation-delay: 0s; height: 12px; }
+.waveform span:nth-child(2) { animation-delay: 0.2s; height: 20px; }
+.waveform span:nth-child(3) { animation-delay: 0.4s; height: 16px; }
+.waveform span:nth-child(4) { animation-delay: 0.6s; height: 10px; }
+
+@keyframes wave {
+    0%, 100% { transform: scaleY(1); }
+    50% { transform: scaleY(1.5); }
+}
+
+.audio-control.paused .waveform span {
+    animation: none;
+    opacity: 0.3;
+}
+
+/* Decorative Row */
+.deco-row {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 35px 0 25px;
+    flex-wrap: wrap;
+}
+
+.deco-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255,255,245,0.08);
+    padding: 10px 24px;
+    border-radius: 60px;
+    backdrop-filter: blur(4px);
+    border: 0.5px solid rgba(217, 184, 108, 0.4);
+    font-size: 0.95rem;
+    color: #eedbba;
+    transition: all 0.3s;
+}
+
+.deco-item:hover {
+    background: rgba(255,255,245,0.12);
+    transform: translateY(-2px);
+}
+
+/* Card Footer */
+.card-footer {
+    margin-top: 40px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255,255,245,0.12);
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    font-size: 0.8rem;
+    color: rgba(255,245,215,0.6);
+}
+
+
+
+/* Responsive */
+@media (max-width: 680px) {
+    .card-inner { padding: 40px 30px; }
+    .message { font-size: 1rem; padding-right: 20px; }
+    .dua-text { font-size: 0.95rem; }
+    .deco-item { padding: 6px 16px; font-size: 0.85rem; }
+}
+
+@media (max-width: 480px) {
+    .card-inner { padding: 30px 22px; }
+    .greeting-arabic { font-size: 2.2rem; }
+    .greeting-arabic span{
+        font-size: 2.35rem;
+    }
+}
+
+/* Sparkles */
+.sparkle-layer { position: fixed; inset: 0; pointer-events: none; z-index: 5; overflow: hidden; }
+.spark {
+    position: absolute;
+    background: radial-gradient(circle, #ffefb0, #daa34a);
+    border-radius: 50%;
+    opacity: 0;
+    animation: floatSpark 6s ease-in-out infinite;
+}
+@keyframes floatSpark {
+    0% { transform: translateY(20px) scale(0.2); opacity: 0; }
+    25% { opacity: 0.7; }
+    75% { opacity: 0.5; }
+    100% { transform: translateY(-200px) scale(1); opacity: 0; }
+}
+
+/* Confetti Layer */
+.confetti-layer {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 6;
+    overflow: hidden;
+}
+
+.confetti-piece {
+    position: absolute;
+    width: 8px;
+    height: 14px;
+    background: linear-gradient(135deg, #f3d48f, #e2b85c, #c6943a);
+    opacity: 0.8;
+    animation: confettiFall 3s ease-out forwards;
+    border-radius: 2px;
+}
+
+@keyframes confettiFall {
+    0% {
+        transform: translateY(-50px) rotate(0deg);
+        opacity: 0.9;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.confetti-piece.circle {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+}
+
+/* تلميح تشغيل الصوت */
+.auto-play-hint {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(10px);
+    padding: 8px 20px;
+    border-radius: 50px;
+    color: #e6c280;
+    font-size: 0.8rem;
+    z-index: 20;
+    border: 1px solid rgba(218,165,85,0.3);
+    pointer-events: none;
+    animation: fadeInOut 3s ease-in-out forwards;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateX(-50%) translateY(20px); }
+    20% { opacity: 1; transform: translateX(-50%) translateY(0); }
+    80% { opacity: 1; transform: translateX(-50%) translateY(0); }
+    100% { opacity: 0; transform: translateX(-50%) translateY(-20px); visibility: hidden; }
+}
+</style>
+</head>
+<body>
+
+<div class="bg-scene">
+    <img src="https://images.pexels.com/photos/2526105/pexels-photo-2526105.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="desert landscape at dusk" loading="lazy">
+    <div class="overlay-gradient"></div>
+</div>
+<div class="warm-glow"></div>
+<div class="sparkle-layer" id="sparkleLayer"></div>
+<div class="confetti-layer" id="confettiLayer"></div>
+
+<div class="main-container">
+    <div class="eid-card">
+        <div class="card-inner">
+            <div class="meta-badge">
+                <span class="badge-date">🕌 عيد الأضحى المبارك • 1447</span>
+            </div>
+            
+            <h1 class="greeting-arabic">
+                <span>عبد الله الخلايلة</span><br>
+                يهنئكم بحلول عيد الأضحى المبارك
+            </h1>
+            
+            <div class="name-headline">
+                كل عام وأنتم بخير <span style="font-size: 1.5rem;">✦</span> عيد أضحى مبارك
+            </div>
+            
+            <p class="message">
+                تقبل الله منا ومنكم صالح الطاعات، وأعاد هذه الأيام المباركة عليكم باليمن والبركات، 
+                وملأ قلوبكم بالرضا والسكينة، وجعل عيدكم فرحةً دائمةً لا تنقضي.
+            </p>
+            
+            <div class="dua-container">
+                <div class="dua-text">
+                    🤲 "اللهم تقبل طاعتنا، واجعلنا من عتقائك من النار، واغفر لنا ولوالدينا وللمسلمين، 
+                    وأدم علينا نعمة الأمن والإيمان، وبارك لنا في أعيادنا."
+                </div>
+            </div>
+            
+            <div class="dua-container" style="background: rgba(0,0,0,0.2);">
+                <div class="dua-text">
+                    🕊️ أسأل الله أن يجعلكم من السعداء في الدنيا والآخرة، وأن يجمع شملكم بأحبابكم 
+                    على الخير والمسرة، وكل عام وأنتم إلى الله أقرب.
+                </div>
+            </div>
+            
+            <div class="deco-row">
+                <div class="deco-item"><span>🐏</span> <span>أضاحي مقبولة</span></div>
+                <div class="deco-item"><span>🌙</span> <span>عيد سعيد</span></div>
+            </div>
+            
+            <!-- Audio Control -->
+            <div class="audio-control" id="audioControl">
+                <div class="audio-info">
+                    <span class="play-icon" id="audioIcon">🔊</span>
+                    <span id="audioText">🕌 تكبيرات العيد تعمل 🕌</span>
+                </div>
+                <div class="waveform" id="waveform">
+                    <span></span><span></span><span></span><span></span>
+                </div>
+            </div>
+            
+            <div class="card-footer">
+                <span>◆</span> تقبل الله طاعاتكم <span>◆</span> عيد مبارك <span>◆</span>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<audio id="eidTakbeer" loop preload="auto">
+    <source src="WhatsApp Audio 2026-05-25 at 9.30.03 AM.mpeg" type="audio/mpeg">
+</audio>
+
+<!-- تلميح للمستخدم -->
+<div class="auto-play-hint" id="autoPlayHint">🎵 جاري تشغيل تكبيرات العيد... 🎵</div>
+
+<script>
+// ========================
+// 1. إنشاء البريق (Sparkles)
+// ========================
+const sparkleContainer = document.getElementById('sparkleLayer');
+for (let i = 0; i < 50; i++) {
+    const spark = document.createElement('div');
+    spark.classList.add('spark');
+    const size = Math.random() * 6 + 2;
+    spark.style.width = size + 'px';
+    spark.style.height = size + 'px';
+    spark.style.left = Math.random() * 100 + '%';
+    spark.style.top = Math.random() * 100 + '%';
+    spark.style.animationDuration = Math.random() * 8 + 4 + 's';
+    spark.style.animationDelay = Math.random() * -10 + 's';
+    sparkleContainer.appendChild(spark);
+}
+
+// ========================
+// 2. نظام الزينة (Confetti)
+// ========================
+const confettiLayer = document.getElementById('confettiLayer');
+
+function launchConfetti() {
+    const count = Math.floor(Math.random() * 12) + 6;
+    
+    for (let i = 0; i < count; i++) {
+        const confetti = document.createElement('div');
+        confetti.classList.add('confetti-piece');
+        
+        if (Math.random() > 0.7) {
+            confetti.classList.add('circle');
+        }
+        
+        const colors = [
+            'linear-gradient(135deg, #f3d48f, #e2b85c)',
+            'linear-gradient(135deg, #e8c17a, #d4a43a)',
+            'linear-gradient(135deg, #ffd966, #e6b422)',
+            'linear-gradient(135deg, #f5e6b8, #daa74a)',
+            'linear-gradient(135deg, #ffb347, #ff8c00)',
+            'linear-gradient(135deg, #ff6b6b, #ee5a24)',
+            'linear-gradient(135deg, #6bff7b, #2ecc71)',
+            'linear-gradient(135deg, #6bb5ff, #3498db)'
+        ];
+        confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+        
+        const randomX = Math.random() * window.innerWidth;
+        confetti.style.left = randomX + 'px';
+        
+        const sizeW = Math.random() * 10 + 4;
+        const sizeH = Math.random() * 16 + 6;
+        confetti.style.width = sizeW + 'px';
+        confetti.style.height = sizeH + 'px';
+        
+        const duration = Math.random() * 2 + 2.5;
+        confetti.style.animationDuration = duration + 's';
+        confetti.style.animationDelay = Math.random() * 0.5 + 's';
+        
+        confettiLayer.appendChild(confetti);
+        
+        setTimeout(() => {
+            confetti.remove();
+        }, duration * 1000 + 100);
+    }
+}
+
+let confettiInterval = setInterval(() => {
+    launchConfetti();
+}, 2000);
+
+setTimeout(() => {
+    launchConfetti();
+    launchConfetti();
+}, 500);
+
+// ========================
+// 3. نظام الصوت - تشغيل تلقائي فوري
+// ========================
+const audio = document.getElementById('eidTakbeer');
+const audioControl = document.getElementById('audioControl');
+const audioIcon = document.getElementById('audioIcon');
+const audioText = document.getElementById('audioText');
+const autoPlayHint = document.getElementById('autoPlayHint');
+let isPlaying = false;
+let playAttempts = 0;
+
+audio.volume = 0.5;
+audio.loop = true;
+
+// تحميل الصوت مسبقاً
+audio.load();
+
+// وظيفة تشغيل الصوت
+async function playAudio() {
+    try {
+        await audio.play();
+        isPlaying = true;
+        audioControl.classList.remove('paused');
+        audioIcon.textContent = '🔊';
+        audioText.innerHTML = '🕌 تكبيرات العيد 🕌';
+        audioText.style.color = '#f3da9b';
+        console.log('✅ Takbeer is playing automatically');
+        
+        // إخفاء التلميح
+        if (autoPlayHint) {
+            autoPlayHint.style.opacity = '0';
+            setTimeout(() => {
+                if (autoPlayHint) autoPlayHint.style.display = 'none';
+            }, 1000);
+        }
+        return true;
+    } catch (err) {
+        console.log('Playback error (attempt ' + (playAttempts + 1) + '):', err);
+        return false;
+    }
+}
+
+// محاولات متعددة لتشغيل الصوت تلقائياً
+async function attemptAutoPlay() {
+    playAttempts++;
+    
+    // المحاولة الأولى فوراً
+    let success = await playAudio();
+    
+    if (!success && playAttempts < 5) {
+        // محاولات إضافية بتأخير متزايد
+        setTimeout(() => attemptAutoPlay(), 500 * playAttempts);
+    }
+    
+    if (!success && playAttempts >= 5) {
+        // إذا فشلت كل المحاولات، نظهر للمستخدم أنه يحتاج للنقر
+        audioControl.classList.add('paused');
+        audioIcon.textContent = '🔇';
+        audioText.innerHTML = '▶ اضغط هنا لتشغيل التكبيرات';
+        audioText.style.color = '#e6c280';
+        
+        if (autoPlayHint) {
+            autoPlayHint.innerHTML = '⚠️ اضغط على الصفحة لتشغيل التكبيرات ⚠️';
+            autoPlayHint.style.animation = 'none';
+            autoPlayHint.style.opacity = '1';
+            autoPlayHint.style.background = 'rgba(0,0,0,0.8)';
+        }
+    }
+}
+
+// بدء محاولات التشغيل التلقائي فور تحميل الصفحة
+setTimeout(() => {
+    attemptAutoPlay();
+}, 100);
+
+// محاولة تشغيل عند أي تفاعل من المستخدم (لحالات الحظر)
+function handleUserInteraction() {
+    if (!isPlaying && audio.paused) {
+        playAudio();
+    }
+}
+
+document.addEventListener('click', handleUserInteraction);
+document.addEventListener('touchstart', handleUserInteraction);
+document.addEventListener('keydown', handleUserInteraction);
+
+// زر التحكم اليدوي
+audioControl.addEventListener('click', async (e) => {
+    e.stopPropagation();
+    if (isPlaying) {
+        audio.pause();
+        isPlaying = false;
+        audioControl.classList.add('paused');
+        audioIcon.textContent = '🔇';
+        audioText.innerHTML = '▶ اضغط لتشغيل التكبيرات';
+        audioText.style.color = '#e6c280';
+    } else {
+        await playAudio();
+    }
+});
+
+// ========================
+// 4. زر المشاركة
+// ========================
+document.getElementById('shareBtn').addEventListener('click', async () => {
+    const shareText = 'عبد الله الخلايلة يهنئكم بحلول عيد الأضحى المبارك. كل عام وأنتم بخير!';
+    if (navigator.share) {
+        try {
+            await navigator.share({
+                title: 'عيد أضحى مبارك',
+                text: shareText,
+                url: window.location.href
+            });
+        } catch (err) {}
+    } else {
+        try {
+            await navigator.clipboard.writeText(shareText);
+            alert('✨ تم نسخ التهنئة! يمكنك مشاركتها الآن ✨');
+        } catch (err) {
+            alert('🎉 عيد مبارك! 🎉');
+        }
+    }
+});
+
+// تنظيف الفاصل الزمني
+window.addEventListener('beforeunload', () => {
+    if (confettiInterval) clearInterval(confettiInterval);
+});
+</script>
+</body>
+</html>
